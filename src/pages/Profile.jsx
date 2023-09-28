@@ -16,7 +16,7 @@ const Profile = () => {
     transition={{duration:0.8,ease:'easeIn'}}
     exit={{opacity:0}}
     className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:text-white'>
-      <div className='h-full md:h-screen dark:text-white'>
+      <div className='h-full min-h-screen dark:text-white'>
 
       <div className='flex flex-col md:flex-row pt-28 items-center md:px-10 lg:px-20 md:justify-between'>
 
@@ -47,10 +47,11 @@ const Profile = () => {
             <div className='flex flex-col gap-3 my-5'>
               <h1 className='text_red text-3xl font-bold text-center'>Orders</h1>
 
-              
-                  <div className="grid grid-cols-1 gap-4 max-h-[400px] overflow-y-scroll">
+              <input type="search" className='p-3 outline-none' placeholder='Search for an order by Name' />
 
-                      <div className='bg-slate-50 dark:bg-slate-600 p-4 rounded-lg shadow-lg'>
+                  <div className="grid grid-cols-1 gap-4 max-h-[400px] overflow-y-scroll ">
+
+                      <div className='bg-slate-50 dark:bg-slate-600 p-4 rounded-lg shadow-lg '>
                         <div className='flex items-center space-x-2 text-sm'>
 
                           <p className='text-red-500'>
