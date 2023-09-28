@@ -9,7 +9,12 @@ const Order = () => {
     const [fromLoc,setFromLoc]=useState('')
     const [toLoc,setToLoc]=useState('')
   return (
-    <div className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:text-white'>
+    <m.div 
+    animate={{opacity:1}}
+    initial={{opacity:0}}
+    transition={{duration:0.8,ease:'easeIn'}}
+    exit={{opacity:0}}
+    className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:text-white'>
         <div className='h-screen flex flex-col items-center pt-20'>
             <h1 className='text-3xl font-extrabold'>Order a <span className='text_red'>delivery.</span> </h1>
 
@@ -41,7 +46,7 @@ const Order = () => {
         </div>
         </div>
       
-    </div>
+    </m.div>
   )
 }
 

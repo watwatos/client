@@ -17,7 +17,11 @@ const App = () => {
       if(dark==='light'){
         setDark('dark')
       }else{setDark('light')}
-    localStorage.setItem('theme',dark)
+    
+      
+      if(dark==='light'){
+        localStorage.setItem('theme','dark')
+      }else{localStorage.setItem('theme','light')}
     
   }
 
@@ -29,7 +33,8 @@ const App = () => {
     <div className={localStorage.getItem('theme')==='dark'? 'dark' : ''} >
       
       <Router>
-        <Navbar darkMode={dark} setDarkMode={toggleTheme}/>
+        <Navbar darkMode={localStorage.getItem('theme')} setDarkMode={toggleTheme}/>
+        
       
         <AnimRoutes/>
         <Footer/>

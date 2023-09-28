@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ProfilePopup from '../components/ProfilePopup'
 import img from '../assets/deliveryGuy.png'
+import {motion as m} from 'framer-motion'
 const Profile = () => {
 
     const [name,setName]=useState('ss')
@@ -9,7 +10,12 @@ const Profile = () => {
     const [show,setShow]=useState(false)
 
   return (
-    <div className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:text-white'>
+    <m.div
+    animate={{opacity:1}}
+    initial={{opacity:0}}
+    transition={{duration:0.8,ease:'easeIn'}}
+    exit={{opacity:0}}
+    className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600 dark:text-white'>
       <div className='h-full md:h-screen dark:text-white'>
 
       <div className='flex flex-col md:flex-row pt-28 items-center md:px-10 lg:px-20 md:justify-between'>
@@ -198,7 +204,7 @@ const Profile = () => {
 
       </div>
       
-    </div>
+    </m.div>
   )
 }
 

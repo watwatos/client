@@ -9,7 +9,12 @@ import Cards from '../components/Cards'
 const Hero = () => {
   return (
    
-    <div className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600'>
+    <m.div
+    animate={{opacity:1}}
+    initial={{opacity:0}}
+    transition={{duration:0.8,ease:'easeIn'}}
+    exit={{opacity:0}}
+    className='bg_light dark:from-slate-700 dark:via-slate-800 dark:to-slate-600'>
       
     
     <div className=' h-screen  flex flex-col items-center gap-5 '>
@@ -40,7 +45,7 @@ const Hero = () => {
         
           
         
-    </div>
+    </m.div>
       
       
     
