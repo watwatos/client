@@ -1,16 +1,20 @@
-import React, {   useState } from 'react'
+import React, {    useState } from 'react'
 import './app.css';
 import Navbar from './components/Navbar';
 import AnimRoutes from './components/AnimRoutes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './components/Footer';
+import { useAuthContext } from './context/AuthContext';
 
 
 
 
 const App = () => {
+  
 
   const [dark,setDark]=useState('light')
+
+
    
  
   const toggleTheme=()=>{
@@ -35,7 +39,7 @@ const App = () => {
       <Router>
         <Navbar darkMode={localStorage.getItem('theme')} setDarkMode={toggleTheme}/>
         
-      
+
         <AnimRoutes/>
         <Footer/>
         </Router>
